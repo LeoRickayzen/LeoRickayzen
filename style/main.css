@@ -5,7 +5,7 @@ body, html {
 /* The hero image */
 .hero-image {
     /* The image used */
-    background-image: url("../posts/assets/raw_background.png");
+    background-image: url("../posts/assets/6.jpg");
 
     /* Set a specific height */
     height: 100%;
@@ -30,7 +30,7 @@ body, html {
 
 .post-hero-image {
     /* The image used */
-    background-image: url("../posts/assets/raw_background.png");
+    background-image: url("../posts/assets/6.jpg");
 
     /* Set a specific height */
     height: 25%;
