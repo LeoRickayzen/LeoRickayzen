@@ -5,7 +5,7 @@ body, html {
 /* The hero image */
 .hero-image {
     /* The image used */
-    background-image: url("file:///Users/Leo/Documents/website/posts/assets/raw_background.png");
+    background-image: url("../posts/assets/raw_background.png");
 
     /* Set a specific height */
     height: 100%;
