@@ -1,0 +1,185 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="file:///Users/Leo/Documents/website/style/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="post-hero-image">
+  			<div class="hero-text">
+    			<h1 class = 'code'><span style="color: #808080">>></span> <span style="color: #335BFF">from</span> Blog.posts <span style="color: #335BFF">import</span> Project Allocation System</h1>
+    			<a href='https://github.com/LeoRickayzen'><button type="button" class="btn btn-primary"><i class="fab fa-github"></i> Github</button></a>
+  			</div>
+		</div>
+		<nav class="navbar navbar-default" id="nav">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <span class="navbar-brand">Learning Data</span>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="file:///Users/Leo/Documents/website_publish/index.html">Home</a></li>
+		      <li><a href="#foot">About</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class='container main-stuff main-post'>
+			<div class='row'>
+				<div class='post-text col'>
+			
+					<h1 class='title'>Building a full-stack University project signup system</h1>
+
+					<p>Full code can be found <a href='https://github.com/LeoRickayzen/csc3123'>here.</a>
+
+					<div class = 'tags tags-post'>
+						<a href=''><span class="badge badge-secondary tag">Full-stack</span></a><a href=''><span class="badge badge-secondary tag">Back-end</span></a>
+					</div>
+
+					<hr/>
+
+					<h2>Introduction</h2>
+
+					<p>As part of most University degrees, students complete a final year dissertation or project. Within scientific degrees, these projects are usually chosen from a list, determined by the academic supervisors. The task of allocating and matching supervisors to projects, and projects to students, can be complicated, and allocation can depend on a number of factors, such as supervisor/student preference and project availability.</p>
+
+					<p>Hence why it makes sense for this to be done through a unified online system, where students log in to rank project preference, module leaders log in to allocate students and supervisors to projects, and supervisors view their allocation.
+
+					<p>Given this brief, a strict style guide, and a full-stack <a href='http://catless.ncl.ac.uk/framework/'>framework</a>, I set out to create such a system for a client (my lecturer).</p>
+
+					<h2>The specification</h2>
+
+					<p>A specific brief was given for this task:</p>
+
+					<p><i>'The .. dissertation module leaders .. need a web based system that allows students to chose projects within particular themes, and to browse possible project topics in those themes. They assign a rank ordering to the themes they pick (first choice, second choice...).  Supervisors and theme leaders must be able to upload information about possible topics within their themes and provide a general description for the theme as a whole. Topics could possibly be available across several themes and may be marked as not being offered (and thus hidden from students). The module leaders need to be able to see lists of sttudents and the themes they have chosen, possibly in a variety of orderings and filterings. Once selectiosn have been arbitrated by the module leaders, theme leaders need to be able to see the list of students that have selected their theme and then allocate them, to individual supervisors - the system should automate the sending any relevant email messages about the allocations.'</i></p>
+
+					<h2>The Stack</h2>
+
+					<p>The back-end language of the <a href='http://catless.ncl.ac.uk/framework/'>framework</a> was PHP. This interfaced with a <a href='https://www.mysql.com/'>MySQL</a> database through the <a href='https://redbeanphp.com/index.php'>Redbean</a> ORM, and rendered pages for the front-end using <a href='https://twig.symfony.com/'>Twig</a>. This was deployed to an Apache webserver. The front-end stack consisted of <a href='https://www.w3schools.com/html/html5_intro.asp'>HTML5</a>, <a href='https://getbootstrap.com/'>Bootstrap</a> and <a href='https://jquery.com/'>JQuery</a>.</p>
+
+					<h2>Project Planning</h2>
+
+					<p>So that the 'client' had some input and idea of what the finished product would look like, a fontboard, moodboard, and storyboard of the website were created.</p>
+
+					<img width="800" src="file:///Users/Leo/Documents/website/posts/assets/moodboard.png">
+
+					<p>This storyboard gave some inspiration about the color scheme and 'feel' the website would have. From this a fontboard could be created. Unfortunately given the breif comic sans was off the cards, so in the end <a href='https://fonts.google.com/specimen/Roboto?selection.family=Roboto'>Roboto</a> was used as the font of choice.</p>
+
+					<img width="800" src="file:///Users/Leo/Documents/website/posts/assets/fontboard.png">
+
+					<p>It's worth noting that the font wasn't selected until after the storyboard was presented, so Arial is the actual font used on the storyboard.</p>
+
+					<iframe src="https://drive.google.com/file/d/1FOCLSXQA3YYSVZX3Gstb4df5Dzdm7jMq/preview" width="640" height="480" class='text-center'></iframe>
+
+					<h2>Take-homes</h2>
+
+					<p>The full code and PHPDoc for this project can be found on my <a href='https://github.com/LeoRickayzen/csc3123'>Github</a>, so I will not be discussing implementation details in this blog. But in this section I will be talking about some of the key lessons learned.</p>
+
+					<h4><b>ORM is OResome</b></h4>
+
+					<p>As this was the first time I had used Redbean, and first time I had used in an actual project, I found the learning curve steep, particularly when it came to handling joins. However once I got to grips with it I saw it's benefits, and abstracting away from raw SQL made perfect sense.</p>
+
+					<h4><b>Clearly planning pays dividends...</b></h4>
+
+					<p>This was also the first project where I'd planned in such detail. I found that having a clear idea of what screens should look like, and how users should flow through the app saved time and confusion during development. I never got confused, creating a screen that wasn't necessary and having to backtrack, as the storyboard was always there to keep me on track. In all my subsequent projects I have used this storyboarding approach, even if in a more diluted or rough form.</p>
+
+					<h4><b>...But sometimes you need to be realistic about what's feasible</b></h4>
+
+					<p>However, during development it became clear that what I was attempting to create just wasn't feasible in the time scale I was working with. Some aspects of usability and design had to be compromised, so that the deadline was met. The lesson here being it's important to evaluate how long something will take, and how much value it will actually add to the project, in order to ensure time is there for the most important aspects of the project.</p>
+
+					<h4><b>Not unit testing will lead to regrets later on</b></h4>
+
+					<p>Whilst I have doubts about whether I could have delivered on an extensive set of unit tests, having some would have been desirable in the latter stages of development. As my codebase grew and became more complex, isolating errors became increasingly more difficult. When it got to the last stage of the project, and there was real time pressure, debugging the error that breaks everything would have been alot less stressfull if a set of unit tests gave clues about where and what the error was.</p>
+
+					<p>In A later <a>blog post</a> I'm going to talk about another project, where I provided extensive unit tests, and I found that even though the codebase in this project was far larger and more complex, debugging was still less stressful as a result.</p>
+
+					<h2>The finished Product</h2>
+
+					<p>I was pretty happy with the system I built, and so was the 'client'. I delivered on all of the basic requirements, and couldn't spot any errors (though I don't doubt there probably were some). As can be seen from some of the screenshots below the final product does differ from the storyboard. This is due to a combination of the fact that bootstrap has certain constraints in the way things look on a page, and I discovered limitations in what was possible as mentioned earlier.</p>
+
+					<img src="file:///Users/Leo/Documents/website/posts/assets/student-choose.gif" alt="Lights" style="width:100%">
+
+					<h2>Features</h2>
+
+					<table class='table'>
+					<colgroup>
+					</colgroup>
+					<thead>
+					<tr class="header">
+					<th>Feature</th>
+					<th>Complete</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td markdown="span">Student can rank projects</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Student can see rankings</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Module leader can allocate themes to supervisors</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Theme leader can allocate supervisor to projects</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Theme leader can allocate student to project</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Projects can be marked as unavailable</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">E-mail sent when allocation is made</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+					</td>
+					</tr>
+					<tr>
+					<td markdown="span">Theme leaders can see students in certain orderings</td>
+					<td markdown="span"><i class="fas fa-check"></i>
+
+					</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<p>As prior mentioned, full code for this project can be found <a href='https://github.com/LeoRickayzen/csc3123'>here</a>.</p>
+				</div>
+			</div>
+			<hr/>
+			<div class='row'>
+				<footer>
+					<div class='col-sm-8'>
+							<h4>About Me</h4>
+							<p>Graduate (July 2018) in Computer Science writing about university and weekend projects, in machine learning, data analytics and web development.</p>
+					</div>
+					<div class='col-sm-2 icons'>
+						<row>
+							<div class='col-md-6'>
+								<a href='https://www.linkedin.com/in/leo-rickayzen-618421116/'>
+									<i class="fab fa-linkedin-in fa-2x"></i>
+								</a>
+							</div>
+							<div class='col-md-6'>
+								<a href='https://github.com/LeoRickayzen'>
+									<i class="fab fa-github fa-2x"></i>
+									</a>
+							</div>
+						</row>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
