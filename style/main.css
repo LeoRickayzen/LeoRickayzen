@@ -30,7 +30,7 @@ body, html {
 
 .post-hero-image {
     /* The image used */
-    background-image: url("https://cdn.pixabay.com/photo/2017/12/24/23/58/geometric-3037788_960_720.png");
+    background-image: url("../posts/assets/raw_background.png");
 
     /* Set a specific height */
     height: 25%;
