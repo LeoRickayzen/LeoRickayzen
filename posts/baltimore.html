@@ -1,0 +1,565 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="file:///Users/Leo/Documents/website_publish/style/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class='container-fluid'>
+			<div class='row'>
+				<div class='col'>
+					<div class="hero-image">
+			  			<div class="hero-text">
+			    			<h1 class = 'code title'><span style="color: #808080">>></span> <span style="color: #335BFF">from</span> Learning.Data <span style="color: #335BFF">import</span> Blog</h1>
+			    			<div class = 'tags'>
+			    				<a href=''><span class="badge badge-secondary tag">Data Analytics</span></a>
+			    				<a href=''><span class="badge badge-secondary tag">Machine Learning</span></a>
+			    				<a href=''><span class="badge badge-secondary tag">Full-stack</span></a>
+			    				<a href=''><span class="badge badge-secondary tag">Back-end</span></a>
+			    			</div>
+			    			<br/>
+			    			<br/>
+			    			<a href='https://github.com/LeoRickayzen'><button type="button" class="btn btn-primary"><i class="fab fa-github"></i> Github</button></a>
+			  			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="navbar navbar-default" id="nav">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <span class="navbar-brand">Learning Data</span>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="index.html">Home</a></li>
+		      <li><a href="#foot">About</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class='container main-stuff '>
+			<div class = 'row'>
+				<div class = 'col post-list'>
+					<div class = 'row'>
+						<div class = 'col center-col'>
+							<h2 class='text-center'>Posts</h2>
+							<hr/>
+						</div>
+					</div>
+					<div class = 'row'><html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="file:///Users/Leo/Documents/website_publish/style/main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="post-hero-image">
+  			<div class="hero-text">
+    			<h1 class = 'code'><span style="color: #808080">>></span> <span style="color: #335BFF">from</span> Blog.posts <span style="color: #335BFF">import</span> Baltimore Crime Prediction</h1>
+    			<a href='https://github.com/LeoRickayzen'><button type="button" class="btn btn-primary"><i class="fab fa-github"></i> Github</button></a>
+  			</div>
+		</div>
+		<nav class="navbar navbar-default" id='nav'>
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <span class="navbar-brand">Learning Data</span>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="../index.html">Home</a></li>
+		      <li><a href="#">About</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<div class='container main-stuff main-post'>
+			<div class='row'>
+				<div class='post-text col'>
+
+					<h1 class='title'>Using Machine Learning to Predict Crime in Baltimore</h1>
+
+					<p>Full code will soon be made available <a href=''>here.</a>
+
+					<div class = 'tags tags-post'>
+						<a href=''><span class="badge badge-secondary tag">Machine Learning</span></a><a href=''><span class="badge badge-secondary tag">Data Analytics</span></a>
+					</div>
+
+					<hr/>
+
+					<h2>Introduction</h2>
+
+					<p>In recent years, Machine Learning has been applied to solve a wide range of problems, from fraud detection, to object recognition. Unsurprisingly, a subset of researchers have turned their attention to applying machine learning to problems in crime analysis and prediction. In this post, I walkthrough my approach to using <i>off the shelf</i> machine learning algorithms and some feature extraction, to predict crime occurence in Baltimore.</p>
+
+					<h2>The dataset</h2>
+
+					<p>You can find the full version of the dataset, kindly provided by the Baltimore Police Department <a href='https://data.baltimorecity.gov/Public-Safety/BPD-Part-1-Victim-Based-Crime-Data/wsfq-mvij'>here</a>. Further on I reference <a href='https://data.baltimorecity.gov/Public-Safety/BPD-Arrests/3i3v-ibrt'>this arrest dataset</a>, and <a href='https://data.baltimorecity.gov/Public-Safety/CCTV-Locations/hdyb-27ak'>this CCTV dataset</a>, all made possible by open data!!! The schema of each of these datasets is relatively self-explanatory, we're treating the time as the time of arrest or time that the crime was committed. The only real mystery is what post and crimecode refered to... but these were discarded anyway<p>
+
+					<table class="table">
+					<caption>Dataset Fields</caption>
+					<colgroup>
+					</colgroup>
+					<thead>
+					<tr class="header">
+					<th>Field name</th>
+					<th>Description</th>
+					<th>Example</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td markdown="span">CrimeCode</td>
+					<td markdown="span">-</td>
+					<td markdown="span">7A</td>
+					</tr>
+					<tr>
+					<td markdown="span">CrimeDate</td>
+					<td markdown="span">Date of crime</td>
+					<td markdown="span">10/10/2018</td>
+					</tr>
+					<tr>
+					<td markdown="span">CrimeTime</td>
+					<td markdown="span">Time of crime</td>
+					<td markdown="span">23:15:00</td>
+					</tr>
+					<tr>
+					<td markdown="span">Description</td>
+					<td markdown="span">COMMON ASSAULT</td>
+					<td markdown="span">1.5</td>
+					</tr>
+					<tr>
+					<td markdown="span">District</td>
+					<td markdown="span">Central</td>
+					<td markdown="span">0.5</td>
+					</tr>
+					<tr>
+					<td markdown="span">Inside/Outside</td>
+					<td markdown="span">I</td>
+					<td markdown="span">1.5</td>
+					</tr>
+					<tr>
+					<td markdown="span">Latitude</td>
+					<td markdown="span">39.13201</td>
+					<td markdown="span">1.5</td>
+					</tr>
+					<tr>
+					<td markdown="span">Longitude</td>
+					<td markdown="span">Lon coordinate</td>
+					<td markdown="span">-76.20122</td>
+					</tr>
+					<tr>
+					<td markdown="span">Location</td>
+					<td markdown="span">76 West Rd.</td>
+					<td markdown="span">1.5</td>
+					</tr>
+					<tr>
+					<td markdown="span">Location 1</td>
+					<td markdown="span">full coordinates</td>
+					<td markdown="span">(39.13201, -76.20122)</td>
+					</tr>
+					<tr>
+					<td markdown="span">Neighborhood</td>
+					<td markdown="span">Neighborhood of occurence</td>
+					<td markdown="span">Brooklyn</td>
+					</tr>
+					<tr>
+					<td markdown="span">Post</td>
+					<td markdown="span">-</td>
+					<td markdown="span">512</td>
+					</tr>
+					<tr>
+					<td markdown="span">Premise</td>
+					<td markdown="span">General description of where the crime occurred</td>
+					<td markdown="span">STREET</td>
+					</tr>
+					<tr>
+					<td markdown="span">Total Incidents</td>
+					<td markdown="span">Number of incidents</td>
+					<td markdown="span">1</td>
+					</tr>
+					<tr>
+					<td markdown="span">Weapon</td>
+					<td markdown="span">theft</td>
+					<td markdown="span">FIREARM</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<h2>The problem</h2>
+
+					<p>Given that the data was relatively large (~270,000 rows), complete and nicely structured (.csv), I set out trying to predict where and when crime was likely to occur in Baltimore. This lead to the formation of this problem as one of classification. A classifier would receive a time, a date and a long/latitude (plus any <a>additional extracted features</a>), and output a type of crime (if any). Working off of a hunch, also confirmed by some <a>other research</a>, I figured that extracting features centered around previous nearby crime events was a way to go.</p>
+
+					<h2>Approach</h2>
+
+					<h2>Data wrangling</h2>
+
+					<p>Some data wrangling had to be done first so that the data could be queried properly in Pandas. This involved converting the types of the temporal columns in both the arrest and crime dataset, selecting and partitioning the data to be within the correct date range, introducing a crime type column, extracting street from the location to be a column in it's own right, and removing rows with NaN. All this is included in the full notebook(s) available <a href=''>here</a></p>
+
+					<h2>Clustering</h2>
+
+					<p>It was suggested to me to try clustering the dataset on space and time, seeing if certain crime types occupied their own individual space. The code for doing this in scikit-learn is below for both t-SNE and PCA. Unfortunately, neither of these algorithms yeilded any kind of clear, distinct clustering across different crime types.</p>
+
+					<p class = 'well code'>
+					pca = PCA(n_components=2)<br>
+					reduced_pca = pca.fit_transform(features)<br>
+					reduced_df_pca = pd.DataFrame(reduced_pca)<br>
+
+					reduced_df_pca['Description'] = df_edit['Description']<br>
+					reduced_df_pca['Weapon'] = df_edit['Weapon']<br>
+					reduced_df_pca['x'] = reduced_df_pca[0]<br>
+					reduced_df_pca['y'] = reduced_df_pca[1]<br>
+
+					ax = sns.lmplot(x = 'x', y = 'y', hue='Description', data=reduced_df_pca, fit_reg=False)<br>
+					plt.show()
+					</p>
+
+
+					<p class='well code'>
+					tsne = TSNE(n_components=2, verbose=True, perplexity=50, learning_rate=200)<br>
+
+					reduced_tsne = tsne.fit_transform(features)<br>
+					reduced_df_tsne = pd.DataFrame(reduced_tsne)<br>
+
+					reduced_df_tsne['Description'] = df_edit['Description']<br>
+					reduced_df_tsne['Weapon'] = df_edit['Weapon']<br>
+					reduced_df_tsne['x'] = reduced_df_tsne[0]<br>
+					reduced_df_tsne['y'] = reduced_df_tsne[1]<br>
+					reduced_df_tsne = reduced_df_tsne[['x', 'y', 'Description']]<br>
+
+					ax = sns.lmplot(x = 'x', y = 'y', hue='Description', data=reduced_df_tsne, fit_reg=False)<br>
+					plt.show()
+					</p>
+
+					<img src="file:///Users/Leo/Documents/website/posts/assets/tsne.png">
+
+					<h2>Feature extraction</h2>
+
+					<p>With no visible clusters it was time to go back to the drawing board. I'd mentioned earlier the idea that maybe nearby crime events would cause a new crime to happen and it seemed that alot of the <a>previous research</a> had indicated that this was indeed the case. In order to express the background events for any spatio-temporal point in the dataset, it was necessary to come up with some additional features that could be extracted in order to represent this.</p>
+
+					<p>For any point in the dataset, it was in theory possible to count the number of crimes that had happened within the last <i>n</i> days, and within a certain radius <i>r</i>. It was also possible to extract this information for only certain types of <i>triggered</i> crime and <i>background</i> crime. The smart way to do this, would be to distribute this as a lambda function in Spark. However, given that I did not have access to any kind of distributed computing resources, this wasn't an option.</p>
+
+					<p>Instead, an example lambda function can be seen below.</p>
+
+					<p class='well code'>
+					def streetRecent(data, backgroundType, days, dateCol, streetCol):<br>
+					    df_reduced = data.loc[(data['CrimeDate'] <= dateCol) & (dateCol-timedelta(days=days) <= data['CrimeDate']) & (data['type'] == backgroundType) & (data['street'] == streetCol)]<br> 
+					    return len(df_reduced)<br>
+		<br>
+					df_pass['street_violent_theft_05_7'] = df_pass.loc[df_pass['type'] == 'violent'].progress_apply(lambda x: streetRecent(df_pass, 'theft', 7, x['CrimeDate'], x['street']), axis=1)<br>
+		<br>
+					df_pass['street_violent_theft_15_14'] = df_pass.loc[df_pass['type'] == 'violent'].progress_apply(lambda x: streetRecent(df_pass, 'theft', 14, x['CrimeDate'], x['street']), axis=1)<br>
+					</p>
+
+					<p>Around 30 of these were applied to 2 Pandas dataframes on the edge machine. Why two? Because in order to select features it was necessary to determine which background events increase the likelihood of a crime happeneing. In order to make this comparison, the same fields were generated for both a normal version of the dataset, and for a version of the dataset where the time of each crime is randomized. If there was a difference between say the mean number of burglaries within a half mile radius within the last week for each field in the dataset, to the mean for each in the shuffled dataset, we can probably assume that the distribution of crime isn't random with respect to other background crime events. Fortunately, for some background events, there was a significant difference, these can be seen in the table below, and were subsequently among the features extracted and used for the clasiffier.</p>
+
+					<table class="table">
+					<caption>Results from Feature Exploration</caption>
+					<colgroup>
+					</colgroup>
+					<thead>
+					<tr class="header">
+					<th>Triggering type</th>
+					<th>Triggered type</th>
+					<th>Radius</th>
+					<th>Days</th>
+					<th>Difference</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td markdown="span">theft</td>
+					<td markdown="span">violent</td>
+					<td markdown="span">0.5</td>
+					<td markdown="span">7</td>
+					<td markdown="span">2.21</td>
+					</tr>
+					<tr>
+					<td markdown="span">theft</td>
+					<td markdown="span">violent</td>
+					<td markdown="span">1.5</td>
+					<td markdown="span">14</td>
+					<td markdown="span">8.26</td>
+					</tr>
+					<tr>
+					<td markdown="span">violent</td>
+					<td markdown="span">violent</td>
+					<td markdown="span">0.5</td>
+					<td markdown="span">7</td>
+					<td markdown="span">2.67</td>
+					</tr>
+					<tr>
+					<td markdown="span">violent</td>
+					<td markdown="span">violent</td>
+					<td markdown="span">1.5</td>
+					<td markdown="span">14</td>
+					<td markdown="span">15.22</td>
+					</tr>
+					<tr>
+					<td markdown="span">violent</td>
+					<td markdown="span">theft</td>
+					<td markdown="span">0.5</td>
+					<td markdown="span">7</td>
+					<td markdown="span">1.67</td>
+					</tr>
+					<tr>
+					<td markdown="span">violent</td>
+					<td markdown="span">theft</td>
+					<td markdown="span">1.5</td>
+					<td markdown="span">14</td>
+					<td markdown="span">6.43</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<p>Amongst the features selected above, additional features were extracted:</p>
+					<ul>
+					<li>The number of incidents involving a weapon at the street, district and neighborhood level</li>
+					<li>The number of arrests at both 0.5 and 1.5 mile radius, and also at the street, district and neighborhood level</li>
+					<li>The number of each crime type at a radius of 0.5 and 1.5 miles, and window of 1 and 2 weeks.</li>
+					<li>The distance to the closest CCTV camera in miles</li>
+					</ul>
+
+					<p>The full code for the feature extraction process can soon be found <a href=''>here</a>.</p>
+
+					<h2>Filling the gaps</h2>
+
+					<p>With feature extraction and data wrangling covered there was still one thing missing. Due to the fact that the model could predict the eventuality that no crime is likely to occur at a given time and place, training and testing rows where this was the case were necessary.</p>
+
+					<p>In order to acheive this random rows were generated, with no crime type, a random date/time and coordinates within the bounds of Baltimore. Due to the fact that Baltimore is not a perfect square, there was a limitation in that some of the points were generated outside of Baltimore, and in the river which it lies on.</p>
+
+					<h2>Model implementation and Results</h2>
+
+					<p>Once all features were finally extracted (it took a while), some predictions could be made and different models could be tested. Due to the fact that the data is highly non-linear, random forest seemed like an obvious choice. As the problem was in classification, based on certain attributes possessed by similar crime types, k-nearest seemed anther logical option. As a baseline measure Naive Bayes was implemented too. An example implementation of the best performing model (Random forest) in <a href=''>scikit-learn</a> can be seen below.</p>
+
+					<p class='well code'>
+					train_X, test_X, train_Y, test_Y = train_test_split(X, y, test_size=0.1, shuffle=False)
+					clf_rf = RandomForestClassifier(n_estimators=20, verbose=True, n_jobs=-1)
+					clf_rf.fit(train_X, train_Y)
+					{% endhighlight %}
+					</p>
+
+					<p>The models were tested with and without extracted features, and at their performance on the simple classification task of predicting if any crime will occur, and the harder task of predicting if any, and if so which type of crime will occur. At both tasks Random Forest performed best.</p>
+
+					<p>However I was suspicious about whether class imbalance from the large number of 'no crime' rows generated was affecting accuracy, and so tested the models where the class imbalance was reduced. The results of this can be seen below, putting knn as the best performing model on the simple task, and random forest on the complex task.</p>
+
+
+					<table class="table">
+					<caption>Scores</caption>
+					<colgroup>
+					</colgroup>
+					<thead>
+					<tr class="header">
+					<th>Model</th>
+					<th>f-1 score simple labelling</th>
+					<th>f-1 score complex labelling</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+					<td markdown="span">Random Forest</td>
+					<td markdown="span">0.63</td>
+					<td markdown="span">0.28</td>
+					</tr>
+					<tr>
+					<td markdown="span">knn</td>
+					<td markdown="span">0.67</td>
+					<td markdown="span">0.27</td>
+					</tr>
+					<tr>
+					<td markdown="span">Naive Bayes</td>
+					<td markdown="span">0.50</td>
+					<td markdown="span">0.15</td>
+					</tr>
+					</tbody>
+					</table>
+
+					<p>In order to gauge the potential use to civilians or law enforcement, heatmaps were generated for an arbitrary 3 day period in the dataset. For each day, one heatmap was produced from the predicted crime occurence, and one from actual crime occurence. These can be seen below.</p>
+					<br>
+					<img src="file:///Users/Leo/Documents/website/posts/assets/heat.png">
+					<br>
+					<p>Fairly high accuracy, and similar looking heatmaps, are promising, but these results need to be taken with a giant pinch of salt due to a number of...</p>
+
+					<h2>Caveats</h2>
+
+					<h3>1. Non uniform distribution of points</h3>
+
+					<p>This caveat is to do with the way that random 'no-crime' points are generated and added to the dataset, and may be causing the impressive results displayed in the graph(s) above.</p>
+					<br>
+					<img src="file:///Users/Leo/Documents/website/posts/assets/nonrandom.png">
+					<br>
+					<p>Imagine a distribution of random points, as depicted below. This is what is added to the dataset when random 'no-crime' points are generated. Now imagine another set of none randomly distributed points as depicted above.</p>
+					<br>
+					<img src="file:///Users/Leo/Documents/website/posts/assets/random.png">
+					<br>
+					<p>Now see below when the 2 sets of points are combined</p>
+					<br>
+					<img src="file:///Users/Leo/Documents/website/posts/assets/randomnonrandom.png">
+					<br>
+					<p>Immediately the distribution of points is shifted, and more concetrated in certain areas. In areas where there is a higher concentration of points there is automatically a larger probability that a classifier will predict a crime occurence in this area. This may explain why the predicted heatmap so closely resembles the actual heatmap, as the classifier is already given a 'headstart' by the fact that the distribution of points is non-random.</p>
+
+					<p>This is a problem, due to the fact that this 'headstart' would not be there in a practical use. Consider the scenario that police want to produce a map predicting the next days crime density. They may produce a random spread of points across the area they want to map, and get the classifier to predict whether or not a crime will occur in a certain point. This is different from the way the model's were tested here, as all crimes that occurred were present in the 'spread' of points and as stated before the points were 'non-random'. In order to evaluate how useful this approach to crime prediction is to law enforcement, the distribution of points in the testing set must be corrected.</p>
+
+					<h3>2. Time of report vs. Time of crime</h3>
+
+					<p>Say a house is burgled on a street at 10:00 AM. The owners of the property are at work, and there is no burglar alarm. From the process detailed <a href=''>earlier</a>, we can assume that this increases the likelihood of a nearby house being burgled. Say that 2 hours later, a house on the same road is burgled by the same burglars. In the test dataset, the algorithm may have predicted this would happen, due to the nearby burglary at 10:00 AM being present in the dataset. However, in the real life scenario, the owners of the home don't report the burglary untill 5:30 PM, when they get home from work. Due to the fact that the model doesn't have the up-to-date information, it fails to predict the 12:00 PM burglary.</p>
+
+					<p>In short, the test dataset benefits from having perfect information, which may result in the model having a higher accuracy than when it is applied to a real life scenario.</p>
+
+					<h2>Conclusion</h2>
+
+					<p>This is an early attempt at crime prediction and whilst the initial results and accuracy may seem promissing, they need to be taken with a pinch of salt. The next step here is to test the models with amendments to the random point generation, which I will likely be doing in a follow up blog. However, this does atleast show that extracting background events, has some significance in improving the accuracy of crime predictions, when using <i>off the shelf</i> machine learning algorithms.</p>
+
+				</div>
+			</div>
+			<hr/>
+			<div class='row'>
+				<footer>
+					<div class='col-sm-8'>
+							<h4>About Me</h4>
+							<p>Graduate (July 2018) in Computer Science writing about university and weekend projects, in machine learning, data analytics and web development.</p>
+					</div>
+					<div class='col-sm-2 icons'>
+						<row>
+							<div class='col-md-6'>
+								<a href='https://www.linkedin.com/in/leo-rickayzen-618421116/'>
+									<i class="fab fa-linkedin-in fa-2x"></i>
+								</a>
+							</div>
+							<div class='col-md-6'>
+								<a href='https://github.com/LeoRickayzen'>
+									<i class="fab fa-github fa-2x"></i>
+									</a>
+							</div>
+						</row>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+	<script>
+					// When the user scrolls the page, execute myFunction 
+			window.onscroll = function() {myFunction()};
+			window.sr = ScrollReveal({ duration: 1000 });
+			sr.reveal('.well')
+			sr.reveal('.tags')
+			sr.reveal('.btn')
+			sr.reveal('.title')
+			sr.reveal('#nav')
+
+			// Get the navbar
+			var navbar = document.getElementById("nav");
+
+			// Get the offset position of the navbar
+			var sticky = navbar.offsetTop;
+
+			// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+			    navbar.classList.add("sticky")
+			  } else {
+			    navbar.classList.remove("sticky");
+			  }
+			}
+	</script>
+</html>
+						<div class = 'row'>
+							<div class = 'well col center-col'>
+								<a href='posts/baltimore.html'>
+									<div class = 'post-thumb col-md-2'>
+										<img src='file:///Users/Leo/Documents/website/posts/assets/heat.png'/>
+									</div>
+								</a>
+								<div class = 'post-text col'>
+									<a href='posts/baltimore.html'>
+										<div class = 'post-title'>
+											<h4>Predicting crime in Baltimore with Machine Learning</h4>
+										</div>
+									</a>
+									<div class = 'post-description'>
+										<p>In recent years, Machine Learning has been applied to solve a wide range of problems, from frauddetection, to object recognition. Unsurprisingly, asubset of researchers have turned their attention toapplying machine learning to problems in crimeanalysis and prediction.</p>
+									</div>
+									<br/>
+									<div class = 'tags'>
+										<a href=''><span class="badge badge-secondary tag">Data Analytics</span></a><a href=''><span class="badge badge-secondary tag">Machine Learning</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<div class = 'well col center-col'>
+								<a href='posts/fullstack.html'>
+									<div class = 'post-thumb col-md-2'>
+										<img src='file:///Users/Leo/Documents/website/posts/assets/student-choose.gif'/>
+									</div>
+								</a>
+								<div class = 'post-text col'>
+									<a href='posts/fullstack.html'>
+										<div class = 'post-title'>
+											<h4>Building a full-stack 	University project 	signup 	system
+											</h4>
+										</div>
+									</a>
+									<div class = 'post-description'>
+										<p>As part of most University 	degrees, students complete a 	final year dissertation or 	project. Within scientific 	degrees, these projects are 	usually chosen from a list, 	determined by the academic 	supervisors. The task of 	allocating and matching 	supervisors to projects, and 	projects to students, can be 	complicated, and allocation 	can depend on</p>
+									</div>
+									<br/>
+									<div class = 'tags'>
+										<a href=''><span class="badge badge-secondary tag">Full-stack</span></a><a href=''><span class="badge badge-secondary tag">Back-end</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr/>
+			<div class='row'>
+				<footer id='foot'>
+					<div class='col-sm-8'>
+							<h4>About Me</h4>
+							<p>I'm Leo, a graduate (July 2018) in Computer Science writing about university and weekend projects, in machine learning, data analytics and web development.</p>
+					</div>
+					<div class='col-sm-2 align-bottom icons'>
+						<div class='col-md-6'>
+							<a href='https://www.linkedin.com/in/leo-rickayzen-618421116/'>
+								<i class="fab fa-linkedin-in fa-2x"></i>
+							</a>
+						</div>
+						<div class='col-md-6'>
+							<a href='https://github.com/LeoRickayzen'>
+								<i class="fab fa-github fa-2x"></i>
+								</a>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+	<script>
+					// When the user scrolls the page, execute myFunction 
+			window.onscroll = function() {myFunction()};
+			window.sr = ScrollReveal({ duration: 1000 });
+			sr.reveal('.well')
+			sr.reveal('.tags')
+			sr.reveal('.btn')
+			sr.reveal('.title')
+			sr.reveal('#nav')
+
+			// Get the navbar
+			var navbar = document.getElementById("nav");
+
+			// Get the offset position of the navbar
+			var sticky = navbar.offsetTop;
+
+			// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+			    navbar.classList.add("sticky")
+			  } else {
+			    navbar.classList.remove("sticky");
+			  }
+			}
+	</script>
+</html>
