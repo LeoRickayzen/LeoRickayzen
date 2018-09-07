@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style/main.css">
+		<link rel="stylesheet" type="text/css" href="file:///Users/Leo/Documents/website_publish/style/main.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -49,26 +49,51 @@
 							<hr/>
 						</div>
 					</div>
-					<div class='row'>
-						<div class = 'well col center-col'>
-							<a href='posts/fullstack.html'>
-								<div class = 'post-thumb col-md-2'>
-									<img src='posts/assets/student-choose.gif'/>
-								</div>
-							</a>
-							<div class = 'post-text col'>
-								<a href='posts/fullstack.html'>
-									<div class = 'post-title'>
-										<h4>Building a full-stack 	University project 	signup 	system
-										</h4>
+					<div class = 'row'>
+						<div class = 'row'>
+							<div class = 'well col center-col'>
+								<a href='posts/baltimore.html'>
+									<div class = 'post-thumb col-md-2'>
+										<img src='file:///Users/Leo/Documents/website/posts/assets/heat.png'/>
 									</div>
 								</a>
-								<div class = 'post-description'>
-									<p>As part of most University 	degrees, students complete a 	final year dissertation or 	project. Within scientific 	degrees, these projects are 	usually chosen from a list, 	determined by the academic 	supervisors. The task of 	allocating and matching 	supervisors to projects, and 	projects to students, can be 	complicated, and allocation can depend on</p>
+								<div class = 'post-text col'>
+									<a href='posts/baltimore.html'>
+										<div class = 'post-title'>
+											<h4>Predicting crime in Baltimore with Machine Learning</h4>
+										</div>
+									</a>
+									<div class = 'post-description'>
+										<p>In recent years, Machine Learning has been applied to solve a wide range of problems, from frauddetection, to object recognition. Unsurprisingly, asubset of researchers have turned their attention toapplying machine learning to problems in crimeanalysis and prediction.</p>
+									</div>
+									<br/>
+									<div class = 'tags'>
+										<a href=''><span class="badge badge-secondary tag">Data Analytics</span></a><a href=''><span class="badge badge-secondary tag">Machine Learning</span></a>
+									</div>
 								</div>
-								<br/>
-								<div class = 'tags'>
-									<a href=''><span class="badge badge-secondary tag">Full-stack</span></a><a href=''><span class="badge badge-secondary tag">Back-end</span></a>
+							</div>
+						</div>
+						<div class='row'>
+							<div class = 'well col center-col'>
+								<a href='posts/fullstack.html'>
+									<div class = 'post-thumb col-md-2'>
+										<img src='file:///Users/Leo/Documents/website/posts/assets/student-choose.gif'/>
+									</div>
+								</a>
+								<div class = 'post-text col'>
+									<a href='posts/fullstack.html'>
+										<div class = 'post-title'>
+											<h4>Building a full-stack 	University project 	signup 	system
+											</h4>
+										</div>
+									</a>
+									<div class = 'post-description'>
+										<p>As part of most University 	degrees, students complete a 	final year dissertation or 	project. Within scientific 	degrees, these projects are 	usually chosen from a list, 	determined by the academic 	supervisors. The task of 	allocating and matching 	supervisors to projects, and 	projects to students, can be 	complicated, and allocation 	can depend on</p>
+									</div>
+									<br/>
+									<div class = 'tags'>
+										<a href=''><span class="badge badge-secondary tag">Full-stack</span></a><a href=''><span class="badge badge-secondary tag">Back-end</span></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -80,7 +105,7 @@
 				<footer id='foot'>
 					<div class='col-sm-8'>
 							<h4>About Me</h4>
-							<p>Graduate (July 2018) in Computer Science writing about university and weekend projects, in machine learning, data analytics and web development.</p>
+							<p>I'm Leo, a graduate (July 2018) in Computer Science writing about university and weekend projects, in machine learning, data analytics and web development.</p>
 					</div>
 					<div class='col-sm-2 align-bottom icons'>
 						<div class='col-md-6'>
@@ -98,4 +123,29 @@
 			</div>
 		</div>
 	</body>
+	<script>
+					// When the user scrolls the page, execute myFunction 
+			window.onscroll = function() {myFunction()};
+			window.sr = ScrollReveal({ duration: 1000 });
+			sr.reveal('.well')
+			sr.reveal('.tags')
+			sr.reveal('.btn')
+			sr.reveal('.title')
+			sr.reveal('#nav')
+
+			// Get the navbar
+			var navbar = document.getElementById("nav");
+
+			// Get the offset position of the navbar
+			var sticky = navbar.offsetTop;
+
+			// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+			function myFunction() {
+			  if (window.pageYOffset >= sticky) {
+			    navbar.classList.add("sticky")
+			  } else {
+			    navbar.classList.remove("sticky");
+			  }
+			}
+	</script>
 </html>
