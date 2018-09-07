@@ -181,7 +181,7 @@
 					plt.show()
 					</p>
 
-					<img src="file:///Users/Leo/Documents/website/posts/assets/tsne.png">
+					<img src="assets/tsne.png">
 
 					<h2>Feature extraction</h2>
 
@@ -326,7 +326,7 @@
 
 					<p>In order to gauge the potential use to civilians or law enforcement, heatmaps were generated for an arbitrary 3 day period in the dataset. For each day, one heatmap was produced from the predicted crime occurence, and one from actual crime occurence. These can be seen below.</p>
 					<br>
-					<img src="file:///Users/Leo/Documents/website/posts/assets/heat.png">
+					<img src="assets/heat.png">
 					<br>
 					<p>Fairly high accuracy, and similar looking heatmaps, are promising, but these results need to be taken with a giant pinch of salt due to a number of...</p>
 
@@ -336,15 +336,15 @@
 
 					<p>This caveat is to do with the way that random 'no-crime' points are generated and added to the dataset, and may be causing the impressive results displayed in the graph(s) above.</p>
 					<br>
-					<img src="file:///Users/Leo/Documents/website/posts/assets/nonrandom.png">
+					<img src="assets/nonrandom.png">
 					<br>
 					<p>Imagine a distribution of random points, as depicted below. This is what is added to the dataset when random 'no-crime' points are generated. Now imagine another set of none randomly distributed points as depicted above.</p>
 					<br>
-					<img src="file:///Users/Leo/Documents/website/posts/assets/random.png">
+					<img src="assets/random.png">
 					<br>
 					<p>Now see below when the 2 sets of points are combined</p>
 					<br>
-					<img src="file:///Users/Leo/Documents/website/posts/assets/randomnonrandom.png">
+					<img src="assets/randomnonrandom.png">
 					<br>
 					<p>Immediately the distribution of points is shifted, and more concetrated in certain areas. In areas where there is a higher concentration of points there is automatically a larger probability that a classifier will predict a crime occurence in this area. This may explain why the predicted heatmap so closely resembles the actual heatmap, as the classifier is already given a 'headstart' by the fact that the distribution of points is non-random.</p>
 
